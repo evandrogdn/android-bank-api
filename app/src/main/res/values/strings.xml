@@ -1,4 +1,15 @@
 <resources>
     <string name="app_name">Banco</string>
     <string name="novo">Novo</string>
+    <string name="nome_label">Nome:</string>
+    <string name="inscr_federal_label">Inscr. Federal:</string>
+    <string name="logradouro_label">Logradouro:</string>
+    <string name="numero_label">Número:</string>
+    <string name="bairro_label">Bairro:</string>
+    <string name="cidade_label">Cidade:</string>
+    <string name="cep_label">CEP:</string>
+    <string name="complemento_label">Complemento (Opcional):</string>
+    <string name="telefone_label">Telefone:</string>
+    <string name="celular_label">Celular:</string>
+    <string name="email_label">E-mail:</string>
 </resources>

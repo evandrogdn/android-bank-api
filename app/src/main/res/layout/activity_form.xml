@@ -147,5 +147,78 @@
             android:inputType="textEmailAddress"
             android:ems="10"
             />
+        <!-- Dados da Agencia -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/agencia_nome_label"
+            />
+        <EditText
+            android:id="@+id/agencia_nome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/agencia_numero"
+            />
+        <EditText
+            android:id="@+id/agencia_numero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/agencia_digito"
+            />
+        <EditText
+            android:id="@+id/agencia_digito"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            />
+
+        <!-- Dados da Agencia -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tipo"
+            />
+        <EditText
+            android:id="@+id/conta_tipo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/conta_numero_label"
+            />
+        <EditText
+            android:id="@+id/conta_numero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/agencia_digito"
+            />
+        <EditText
+            android:id="@+id/conta_digito"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            />
     </LinearLayout>
 </ScrollView>

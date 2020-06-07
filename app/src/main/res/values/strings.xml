@@ -12,4 +12,8 @@
     <string name="telefone_label">Telefone:</string>
     <string name="celular_label">Celular:</string>
     <string name="email_label">E-mail:</string>
+    <string name="agencia_nome_label">Nome da Agência:</string>
+    <string name="agencia_numero">Número da Agência:</string>
+    <string name="agencia_digito">Dígito verificador:</string>
+    <string name="conta_numero_label">Conta número:</string>
 </resources>

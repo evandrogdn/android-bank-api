@@ -18,4 +18,10 @@
     <string name="conta_numero_label">Conta número:</string>
     <string name="conta_tipo_label">Tipo de Conta:</string>
     <string name="conta_digito_label">Dígito verificador:</string>
+    <string name="conta_origem_numero_label">Número da Conta de Origem:</string>
+    <string name="conta_origem_digito_label">Dígito verificador da Conta de Origem:</string>
+    <string name="conta_destino_numero_label">Número da Conta de Destino:</string>
+    <string name="conta_destino_digito_label">Dígito verificador da Conta de Destino:</string>
+    <string name="valor_transfer_label">Valod da Transferẽncia</string>
+    <string name="botao_transfer_label">Transferir</string>
 </resources>

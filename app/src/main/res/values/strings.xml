@@ -24,4 +24,5 @@
     <string name="conta_destino_digito_label">Dígito verificador da Conta de Destino:</string>
     <string name="valor_transfer_label">Valod da Transferẽncia</string>
     <string name="botao_transfer_label">Transferir</string>
+    <string name="botao_save_label">Salvar</string>
 </resources>

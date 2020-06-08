@@ -220,5 +220,11 @@
             android:layout_height="wrap_content"
             android:ems="10"
             />
+
+        <Button
+            android:id="@+id/botao_save"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/botao_save_label" />
     </LinearLayout>
 </ScrollView>

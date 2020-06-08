@@ -12,10 +12,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/numero_agencia_conta_saque_label"
+            android:text="@string/numero_agencia_conta_deposito_label"
             />
         <EditText
-            android:id="@+id/numero_agencia_conta_saque"
+            android:id="@+id/numero_agencia_conta_deposito"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -24,10 +24,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/digito_agencia_conta_saque_label"
+            android:text="@string/digito_agencia_conta_deposito_label"
             />
         <EditText
-            android:id="@+id/digito_agencia_conta_saque"
+            android:id="@+id/digito_agencia_conta_deposito"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -36,10 +36,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/numero_conta_saque_label"
+            android:text="@string/numero_conta_deposito_label"
             />
         <EditText
-            android:id="@+id/conta_saque_numero"
+            android:id="@+id/conta_deposito_numero"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -48,10 +48,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/digito_conta_saque_label"
+            android:text="@string/digito_conta_deposito_label"
             />
         <EditText
-            android:id="@+id/conta_saque_digito"
+            android:id="@+id/conta_deposito_digito"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -60,21 +60,20 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/valor_saque_label"
+            android:text="@string/valor_deposito_label"
             />
         <EditText
-            android:id="@+id/valor_saque"
+            android:id="@+id/valor_deposito"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             />
 
         <Button
-            android:id="@+id/botao_transfer"
+            android:id="@+id/botao_deposito"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/botao_saque_label"
+            android:text="@string/botao_deposito_label"
             />
-
     </LinearLayout>
 </ScrollView>

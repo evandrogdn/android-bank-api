@@ -27,6 +27,12 @@
     <string name="botao_transfer_label">Transferir</string>
     <string name="botao_saque_label">Sacar</string>
     <string name="botao_save_label">Salvar</string>
-    <string name="numero_conta_saque_label">Número da conta para saque:</string>
-    <string name="digito_conta_saque_label">Dígito da conta para saque:</string>
+    <string name="numero_conta_saque_label">Número da Conta para Saque:</string>
+    <string name="digito_conta_saque_label">Dígito da Conta para Saque:</string>
+    <string name="numero_agencia_conta_saque_label">Número da Agência da Conta para Saque:</string>
+    <string name="digito_agencia_conta_saque_label">Dígito verificador da Agência da Conta para Saque:</string>
+    <string name="numero_agencia_conta_origem_label">Número da Agência da Conta Origem:</string>
+    <string name="digito_agencia_conta_origem_label">Dígito verificador da Agência da Conta Origem:</string>
+    <string name="numero_agencia_conta_destino_label">Número da Agência da Conta Destino:</string>
+    <string name="digito_agencia_conta_destino_label">Dígito verificador da Agência da Conta Origem:</string>
 </resources>

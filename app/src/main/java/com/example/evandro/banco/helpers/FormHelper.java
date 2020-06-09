@@ -32,10 +32,6 @@ public class FormHelper {
 
     // instancias das classes que compoem os dados presentes no form
     private ContaCliente contaCliente;
-    private Agencia agencia;
-    private Conta conta;
-    private Contato contato;
-    private Endereco endereco;
 
     public FormHelper (FormActivity form) {
         // captura dos componentes do form
@@ -59,9 +55,28 @@ public class FormHelper {
         this.contaDigito = form.findViewById(R.id.conta_digito);
 
         contaCliente = new ContaCliente();
-        agencia = new Agencia();
-        conta = new Conta();
-        contato = new Contato();
-        endereco = new Endereco();
+    }
+
+    public ContaCliente getDadosForm() {
+        this.contaCliente.setId(this.id.getEditableText().toString());
+        this.contaCliente.setTitular(this.titular.getEditableText().toString());
+        this.contaCliente.setInscrFederal(this.inscrFederal.getEditableText().toString());
+        this.contaCliente.getAgencia().setNome(this.agenciaNome.getEditableText().toString());
+        this.contaCliente.getAgencia().setNumero(this.agenciaNumero.getEditableText().toString());
+        this.contaCliente.getAgencia().setDigito(this.agenciaDigito.getEditableText().toString());
+        this.contaCliente.getConta().setTipo(Integer.parseInt(this.contaTipo.getEditableText().toString()));
+        this.contaCliente.getConta().setNumero(this.contaNumero.getEditableText().toString());
+        this.contaCliente.getConta().setDigito(this.contaDigito.getEditableText().toString());
+        this.contaCliente.getContato().setCelular(this.contatoCelular.getEditableText().toString());
+        this.contaCliente.getContato().setTelefone(this.contatoTelefone.getEditableText().toString());
+        this.contaCliente.getContato().setEmail(this.contatoEmail.getEditableText().toString());
+        this.contaCliente.getEndereco().setBairro(this.enderecoBairro.getEditableText().toString());
+        this.contaCliente.getEndereco().setCep(this.enderecoCep.getEditableText().toString());
+        this.contaCliente.getEndereco().setCidade(this.enderecoCidade.getEditableText().toString());
+        this.contaCliente.getEndereco().setLogradouro(this.enderecoLogradouro.getEditableText().toString());
+        this.contaCliente.getEndereco().setComplemento(this.enderecoComplemento.getEditableText().toString());
+        this.contaCliente.getEndereco().setNumero(this.enderecoNumero.getEditableText().toString());
+
+        return this.contaCliente;
     }
 }

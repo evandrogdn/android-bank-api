@@ -41,4 +41,5 @@
     <string name="digito_conta_deposito_label">Dígito verificador da para Deposito:</string>
     <string name="valor_deposito_label">Valor do Deposito</string>
     <string name="botao_deposito_label">Depositar</string>
+    <string name="id_label">ID</string>
 </resources>

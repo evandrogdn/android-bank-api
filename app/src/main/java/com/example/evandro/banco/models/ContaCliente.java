@@ -21,17 +21,6 @@ public class ContaCliente implements Serializable{
     @SerializedName("conta")
     private Conta conta;
 
-    public ContaCliente(String id, String titular, String inscrFederal, Float saldo, Endereco endereco, Contato contato, Agencia agencia, Conta conta) {
-        this.id = id;
-        this.titular = titular;
-        this.inscrFederal = inscrFederal;
-        this.saldo = saldo;
-        this.endereco = endereco;
-        this.contato = contato;
-        this.agencia = agencia;
-        this.conta = conta;
-    }
-
     public String getId() {
         return id;
     }
@@ -64,6 +53,38 @@ public class ContaCliente implements Serializable{
         return conta;
     }
 
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public void setTitular(String titular) {
+        this.titular = titular;
+    }
+
+    public void setInscrFederal(String inscrFederal) {
+        this.inscrFederal = inscrFederal;
+    }
+
+    public void setSaldo(Float saldo) {
+        this.saldo = saldo;
+    }
+
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
+    }
+
+    public void setContato(Contato contato) {
+        this.contato = contato;
+    }
+
+    public void setAgencia(Agencia agencia) {
+        this.agencia = agencia;
+    }
+
+    public void setConta(Conta conta) {
+        this.conta = conta;
+    }
+
     public static class Endereco implements Serializable {
         @SerializedName("logradouro")
         private String logradouro;
@@ -77,15 +98,6 @@ public class ContaCliente implements Serializable{
         private String numero;
         @SerializedName("complemento")
         private String complemento;
-
-        public Endereco(String logradouro, String bairro, String cidade, String cep, String numero, String complemento) {
-            this.logradouro = logradouro;
-            this.bairro = bairro;
-            this.cidade = cidade;
-            this.cep = cep;
-            this.numero = numero;
-            this.complemento = complemento;
-        }
 
         public String getLogradouro() {
             return logradouro;
@@ -110,6 +122,30 @@ public class ContaCliente implements Serializable{
         public String getComplemento() {
             return complemento;
         }
+
+        public void setLogradouro(String logradouro) {
+            this.logradouro = logradouro;
+        }
+
+        public void setBairro(String bairro) {
+            this.bairro = bairro;
+        }
+
+        public void setCidade(String cidade) {
+            this.cidade = cidade;
+        }
+
+        public void setCep(String cep) {
+            this.cep = cep;
+        }
+
+        public void setNumero(String numero) {
+            this.numero = numero;
+        }
+
+        public void setComplemento(String complemento) {
+            this.complemento = complemento;
+        }
     }
 
     public static class Contato implements Serializable {
@@ -119,12 +155,6 @@ public class ContaCliente implements Serializable{
         private String celular;
         @SerializedName("email")
         private String email;
-
-        public Contato(String telefone, String celular, String email) {
-            this.telefone = telefone;
-            this.celular = celular;
-            this.email = email;
-        }
 
         public String getTelefone() {
             return telefone;
@@ -137,6 +167,18 @@ public class ContaCliente implements Serializable{
         public String getEmail() {
             return email;
         }
+
+        public void setTelefone(String telefone) {
+            this.telefone = telefone;
+        }
+
+        public void setCelular(String celular) {
+            this.celular = celular;
+        }
+
+        public void setEmail(String email) {
+            this.email = email;
+        }
     }
 
     public static class Agencia implements Serializable {
@@ -146,12 +188,6 @@ public class ContaCliente implements Serializable{
         private String numero;
         @SerializedName("digito")
         private String digito;
-
-        public Agencia(String nome, String numero, String digito) {
-            this.nome = nome;
-            this.numero = numero;
-            this.digito = digito;
-        }
 
         public String getNome() {
             return nome;
@@ -164,6 +200,18 @@ public class ContaCliente implements Serializable{
         public String getDigito() {
             return digito;
         }
+
+        public void setNome(String nome) {
+            this.nome = nome;
+        }
+
+        public void setNumero(String numero) {
+            this.numero = numero;
+        }
+
+        public void setDigito(String digito) {
+            this.digito = digito;
+        }
     }
 
     public static class Conta implements Serializable {
@@ -173,12 +221,6 @@ public class ContaCliente implements Serializable{
         private String numero;
         @SerializedName("digito")
         private String digito;
-
-        public Conta(int tipo, String numero, String digito) {
-            this.tipo = tipo;
-            this.numero = numero;
-            this.digito = digito;
-        }
 
         public int getTipo() {
             return tipo;
@@ -190,6 +232,18 @@ public class ContaCliente implements Serializable{
 
         public String getDigito() {
             return digito;
+        }
+
+        public void setTipo(int tipo) {
+            this.tipo = tipo;
+        }
+
+        public void setNumero(String numero) {
+            this.numero = numero;
+        }
+
+        public void setDigito(String digito) {
+            this.digito = digito;
         }
     }
 }

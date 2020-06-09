@@ -7,12 +7,6 @@ public class Agencia implements Serializable {
     private String numero;
     private String digito;
 
-    public Agencia(String nome, String numero, String digito) {
-        this.nome = nome;
-        this.numero = numero;
-        this.digito = digito;
-    }
-
     public String getNome() {
         return nome;
     }
@@ -23,5 +17,17 @@ public class Agencia implements Serializable {
 
     public String getDigito() {
         return digito;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setNumero(String numero) {
+        this.numero = numero;
+    }
+
+    public void setDigito(String digito) {
+        this.digito = digito;
     }
 }

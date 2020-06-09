@@ -7,12 +7,6 @@ public class Conta implements Serializable {
     private String numero;
     private String digito;
 
-    public Conta(int tipo, String numero, String digito) {
-        this.tipo = tipo;
-        this.numero = numero;
-        this.digito = digito;
-    }
-
     public int getTipo() {
         return tipo;
     }
@@ -23,5 +17,17 @@ public class Conta implements Serializable {
 
     public String getDigito() {
         return digito;
+    }
+
+    public void setTipo(int tipo) {
+        this.tipo = tipo;
+    }
+
+    public void setNumero(String numero) {
+        this.numero = numero;
+    }
+
+    public void setDigito(String digito) {
+        this.digito = digito;
     }
 }

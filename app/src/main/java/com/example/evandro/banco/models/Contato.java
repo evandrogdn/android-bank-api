@@ -7,12 +7,6 @@ public class Contato implements Serializable {
     private String celular;
     private String email;
 
-    public Contato(String telefone, String celular, String email) {
-        this.telefone = telefone;
-        this.celular = celular;
-        this.email = email;
-    }
-
     public String getTelefone() {
         return telefone;
     }
@@ -23,5 +17,17 @@ public class Contato implements Serializable {
 
     public String getEmail() {
         return email;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
+
+    public void setCelular(String celular) {
+        this.celular = celular;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }

@@ -25,7 +25,7 @@ public class DepositHelper {
         this.dadosDeposit = new Deposit();
     }
 
-    private Deposit getDadosForm() {
+    public Deposit getDadosForm() {
         this.dadosDeposit.setAgenciaNumero(this.numeroAgencia.getEditableText().toString());
         this.dadosDeposit.setAgenciaDigito(this.digitoAgencia.getEditableText().toString());
         this.dadosDeposit.setContaNumero(this.numeroConta.getEditableText().toString());

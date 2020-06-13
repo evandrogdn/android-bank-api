@@ -11,7 +11,7 @@ public class Transfer implements Serializable {
     private String agenciaContaDestinoDigito;
     private String contaDestinoNumero;
     private String contaDestinoDigito;
-    private String valorTransferencia;
+    private Float valorTransferencia;
 
     public String getAgenciaContaOrigemNumero() {
         return agenciaContaOrigemNumero;
@@ -77,11 +77,11 @@ public class Transfer implements Serializable {
         this.contaDestinoDigito = contaDestinoDigito;
     }
 
-    public String getValorTransferencia() {
+    public Float getValorTransferencia() {
         return valorTransferencia;
     }
 
-    public void setValorTransferencia(String valorTransferencia) {
+    public void setValorTransferencia(Float valorTransferencia) {
         this.valorTransferencia = valorTransferencia;
     }
 }

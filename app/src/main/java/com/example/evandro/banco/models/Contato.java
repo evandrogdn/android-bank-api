@@ -1,10 +1,15 @@
 package com.example.evandro.banco.models;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.io.Serializable;
 
 public class Contato implements Serializable {
+    @SerializedName("telefone")
     private String telefone;
+    @SerializedName("celular")
     private String celular;
+    @SerializedName("email")
     private String email;
 
     public String getTelefone() {
@@ -29,5 +34,14 @@ public class Contato implements Serializable {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    @Override
+    public String toString() {
+        return "{" +
+                "\"telefone\":\"" + telefone + "\"" +
+                ", \"celular\":\"" + celular + "\"" +
+                ", \"email\":\"" + email + "\"" +
+                '}';
     }
 }

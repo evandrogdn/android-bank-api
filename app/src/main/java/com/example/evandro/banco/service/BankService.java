@@ -1,6 +1,7 @@
 package com.example.evandro.banco.service;
 
 import com.example.evandro.banco.models.ContaCliente;
+import com.example.evandro.banco.models.ContaClienteRequest;
 import com.example.evandro.banco.models.Deposit;
 import com.example.evandro.banco.models.Transfer;
 import com.example.evandro.banco.models.Withdraw;
@@ -20,7 +21,7 @@ import retrofit2.http.Path;
 public interface BankService {
     // cadastrar uma conta
     @POST("api/v1/conta-cliente")
-    Call<ContaCliente> bankInsert(@Body ContaCliente contaCliente);
+    Call<ContaCliente> bankInsert(@Body ContaClienteRequest contaCliente);
     // atualizar uma conta
     @PUT("api/v1/conta-cliente/{id}")
     Call<ContaCliente> bankUpdate(@Body ContaCliente contaCliente, @Path("id") String id);

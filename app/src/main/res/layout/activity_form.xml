@@ -12,16 +12,6 @@
         >
 
         <TextView
-            android:visibility="invisible"
-            android:text="@string/id_label" />
-
-        <EditText
-            android:id="@+id/id"
-            android:ems="10"
-            android:visibility="invisible"
-            />
-
-        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/nome_label" />

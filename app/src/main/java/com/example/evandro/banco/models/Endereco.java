@@ -1,13 +1,21 @@
 package com.example.evandro.banco.models;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.io.Serializable;
 
 public class Endereco implements Serializable {
+    @SerializedName("logradouro")
     private String logradouro;
+    @SerializedName("bairro")
     private String bairro;
+    @SerializedName("cidade")
     private String cidade;
+    @SerializedName("cep")
     private String cep;
+    @SerializedName("numero")
     private String numero;
+    @SerializedName("complemento")
     private String complemento;
 
     public String getLogradouro() {
@@ -56,5 +64,17 @@ public class Endereco implements Serializable {
 
     public void setComplemento(String complemento) {
         this.complemento = complemento;
+    }
+
+    @Override
+    public String toString() {
+        return "{" +
+                "\"logradouro\":\"" + logradouro + "\"" +
+                ", \"bairro\":\"" + bairro + "\"" +
+                ", \"cidade\":\"" + cidade + "\"" +
+                ", \"cep\":\"" + cep + "\"" +
+                ", \"numero\":\"" + numero + "\"" +
+                ", \"complemento\":\"" + complemento + "\"" +
+                '}';
     }
 }

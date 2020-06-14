@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.evandro.banco">
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -17,10 +18,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".activities.DepositActivity"/>
-        <activity android:name=".activities.FormActivity"/>
+        <activity android:name=".activities.FormularioActivity"/>
         <activity android:name=".activities.TransferActivity"/>
         <activity android:name=".activities.WithdrawActivity"/>
     </application>
-    <uses-permission android:name="android.permission.INTERNET"/>
 
 </manifest>

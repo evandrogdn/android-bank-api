@@ -1,12 +1,16 @@
 package com.example.evandro.banco;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.example.evandro.banco.activities.FormularioActivity;
 import com.example.evandro.banco.adapters.ContaClienteAdapter;
 import com.example.evandro.banco.models.ContaCliente;
 import com.example.evandro.banco.service.BankService;
@@ -61,5 +65,26 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main_menu, menu);
         return super.onCreateOptionsMenu(menu);
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.new_option:
+                Intent intent = new Intent(
+                        MainActivity.this,
+                        FormularioActivity.class
+                );
+                startActivity(intent);
+                break;
+            default:
+                Toast.makeText(
+                        MainActivity.this,
+                        "NOT IMPLEMENTED YET",
+                        Toast.LENGTH_LONG
+                ).show();
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

@@ -44,7 +44,7 @@ public interface BankService {
     Call<ContaCliente> bankTransfer(@Body Transfer transfer);
 
     public static final Retrofit retrofit = new Retrofit.Builder()
-            .baseUrl("http://localhost:3030/")
+            .baseUrl("http://192.168.0.105:3030/")
             .addConverterFactory(GsonConverterFactory.create())
             .build();
 }

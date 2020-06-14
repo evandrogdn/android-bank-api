@@ -21,5 +21,6 @@
         <activity android:name=".activities.TransferActivity"/>
         <activity android:name=".activities.WithdrawActivity"/>
     </application>
+    <uses-permission android:name="android.permission.INTERNET"/>
 
 </manifest>

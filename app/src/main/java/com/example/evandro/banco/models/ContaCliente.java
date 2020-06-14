@@ -13,13 +13,13 @@ public class ContaCliente implements Serializable{
     @SerializedName("saldo")
     private Float saldo;
     @SerializedName("endereco")
-    private String endereco;
+    private Endereco endereco;
     @SerializedName("contato")
-    private String contato;
+    private Contato contato;
     @SerializedName("agencia")
-    private String agencia;
+    private Agencia agencia;
     @SerializedName("conta")
-    private String conta;
+    private Conta conta;
 
     public String getId() {
         return id;
@@ -37,19 +37,19 @@ public class ContaCliente implements Serializable{
         return saldo;
     }
 
-    public String getEndereco() {
+    public Endereco getEndereco() {
         return endereco;
     }
 
-    public String  getContato() {
+    public Contato getContato() {
         return contato;
     }
 
-    public String getAgencia() {
+    public Agencia getAgencia() {
         return agencia;
     }
 
-    public String getConta() {
+    public Conta getConta() {
         return conta;
     }
 
@@ -69,19 +69,19 @@ public class ContaCliente implements Serializable{
         this.saldo = saldo;
     }
 
-    public void setEndereco(String endereco) {
+    public void setEndereco(Endereco endereco) {
         this.endereco = endereco;
     }
 
-    public void setContato(String contato) {
+    public void setContato(Contato contato) {
         this.contato = contato;
     }
 
-    public void setAgencia(String agencia) {
+    public void setAgencia(Agencia agencia) {
         this.agencia = agencia;
     }
 
-    public void setConta(String conta) {
+    public void setConta(Conta conta) {
         this.conta = conta;
     }
 

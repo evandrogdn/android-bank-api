@@ -76,8 +76,7 @@ public class ContaClienteAdapter extends ArrayAdapter<ContaCliente> {
         titularConta.setText("    Titular: " + contaCliente.getTitular());
         inscrFederal.setText("    Inscr. Federal: " + inscrFederalMasked);
         agenciaConta.setText("    Agência / Conta: " + agenciaContaMasked);
-        saldoConta.setText("    Saldo: " +
-                "" + saldoContaMasked);
+        saldoConta.setText("    Saldo: " + saldoContaMasked);
 
         return convertView;
     }

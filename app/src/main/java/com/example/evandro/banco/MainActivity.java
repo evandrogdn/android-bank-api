@@ -3,6 +3,7 @@ package com.example.evandro.banco;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.Menu;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -54,5 +55,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         onLoadListAccounts();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main_menu, menu);
+        return super.onCreateOptionsMenu(menu);
     }
 }

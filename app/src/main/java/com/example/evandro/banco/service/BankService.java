@@ -36,8 +36,8 @@ public interface BankService {
     @DELETE("api/v1/conta-cliente/{id}")
     Call<Return> bankDelete(@Path("id") String id);
     // realizar saque
-    @POST("api/v1/conta-cliente/movimentar/saque")
-    Call<ContaCliente> bankWithdraw(@Body Withdraw withdraw);
+    @POST("api/v1/conta-cliente/{id}/movimentar/saque")
+    Call<Return> bankWithdraw(@Body Withdraw withdraw, @Path("id") String id);
     // realizar deposito
     @POST("api/v1/conta-cliente/{id}/movimentar/deposito")
     Call<Return> bankDeposit(@Body Deposit deposit, @Path("id") String id);

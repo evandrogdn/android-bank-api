@@ -9,7 +9,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.evandro.banco.R;
 import com.example.evandro.banco.helpers.DepositHelper;
-import com.example.evandro.banco.helpers.FormHelper;
 import com.example.evandro.banco.models.ContaCliente;
 import com.example.evandro.banco.models.Deposit;
 import com.example.evandro.banco.models.Return;
@@ -51,7 +50,7 @@ public class DepositActivity extends AppCompatActivity {
             public void onResponse(Call<Return> call, Response<Return> response) {
                 Toast.makeText(
                         DepositActivity.this,
-                        "Deposito realizado com sucesso!",
+                        response.body().getMessage(),
                         Toast.LENGTH_LONG
                 ).show();
             }

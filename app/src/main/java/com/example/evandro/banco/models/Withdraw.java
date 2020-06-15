@@ -1,51 +1,18 @@
 package com.example.evandro.banco.models;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.io.Serializable;
 
 public class Withdraw implements Serializable {
-    private String agenciaNumero;
-    private String agenciaDigito;
-    private String contaNumero;
-    private String contaDigito;
-    private Float valorSaque;
+    @SerializedName("valorMovimento")
+    private Float valorMovimento;
 
-    public String getAgenciaNumero() {
-        return agenciaNumero;
+    public Float getValorMovimento() {
+        return valorMovimento;
     }
 
-    public void setAgenciaNumero(String agenciaNumero) {
-        this.agenciaNumero = agenciaNumero;
-    }
-
-    public String getAgenciaDigito() {
-        return agenciaDigito;
-    }
-
-    public void setAgenciaDigito(String agenciaDigito) {
-        this.agenciaDigito = agenciaDigito;
-    }
-
-    public String getContaNumero() {
-        return contaNumero;
-    }
-
-    public void setContaNumero(String contaNumero) {
-        this.contaNumero = contaNumero;
-    }
-
-    public String getContaDigito() {
-        return contaDigito;
-    }
-
-    public void setContaDigito(String contaDigito) {
-        this.contaDigito = contaDigito;
-    }
-
-    public Float getValorSaque() {
-        return valorSaque;
-    }
-
-    public void setValorSaque(Float valorSaque) {
-        this.valorSaque = valorSaque;
+    public void setValorMovimento(Float valorMovimento) {
+        this.valorMovimento = valorMovimento;
     }
 }

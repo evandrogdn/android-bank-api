@@ -9,53 +9,6 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         >
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/numero_agencia_conta_deposito_label"
-            />
-        <EditText
-            android:id="@+id/numero_agencia_conta_deposito"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/digito_agencia_conta_deposito_label"
-            />
-        <EditText
-            android:id="@+id/digito_agencia_conta_deposito"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/numero_conta_deposito_label"
-            />
-        <EditText
-            android:id="@+id/conta_deposito_numero"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/digito_conta_deposito_label"
-            />
-        <EditText
-            android:id="@+id/conta_deposito_digito"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            />
 
         <TextView
             android:layout_width="wrap_content"

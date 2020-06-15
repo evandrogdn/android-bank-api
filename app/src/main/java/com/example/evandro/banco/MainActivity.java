@@ -13,6 +13,7 @@ import android.widget.ListView;
 import android.widget.PopupMenu;
 import android.widget.Toast;
 
+import com.example.evandro.banco.activities.DepositActivity;
 import com.example.evandro.banco.activities.FormularioActivity;
 import com.example.evandro.banco.adapters.ContaClienteAdapter;
 import com.example.evandro.banco.models.ContaCliente;
@@ -76,7 +77,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void contaClienteDeposito() {
-
+        Intent intent = new Intent(MainActivity.this, DepositActivity.class);
+        intent.putExtra("conta_cliente_selecionada", this.contaClienteSelecionada);
+        startActivity(intent);
+        onLoadListAccounts();
     }
 
     private void contaClienteSaque() {

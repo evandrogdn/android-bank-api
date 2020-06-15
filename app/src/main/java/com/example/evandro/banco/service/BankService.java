@@ -39,8 +39,8 @@ public interface BankService {
     @POST("api/v1/conta-cliente/movimentar/saque")
     Call<ContaCliente> bankWithdraw(@Body Withdraw withdraw);
     // realizar deposito
-    @POST("api/v1/conta-cliente/movimentar/deposito")
-    Call<ContaCliente> bankDeposit(@Body Deposit deposit);
+    @POST("api/v1/conta-cliente/{id}/movimentar/deposito")
+    Call<Return> bankDeposit(@Body Deposit deposit, @Path("id") String id);
     // realizar transferencia
     @POST("api/v1/conta-cliente/movimentar/transferencia")
     Call<ContaCliente> bankTransfer(@Body Transfer transfer);

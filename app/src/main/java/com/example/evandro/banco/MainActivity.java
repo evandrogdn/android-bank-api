@@ -197,6 +197,9 @@ public class MainActivity extends AppCompatActivity {
                 );
                 startActivity(intent);
                 break;
+            case R.id.refresh_option:
+                onLoadListAccounts();
+                break;
             default:
                 Toast.makeText(
                         MainActivity.this,

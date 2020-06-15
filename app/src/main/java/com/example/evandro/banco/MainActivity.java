@@ -16,6 +16,7 @@ import android.widget.Toast;
 import com.example.evandro.banco.activities.FormularioActivity;
 import com.example.evandro.banco.adapters.ContaClienteAdapter;
 import com.example.evandro.banco.models.ContaCliente;
+import com.example.evandro.banco.models.Return;
 import com.example.evandro.banco.service.BankService;
 
 import java.util.List;
@@ -50,7 +51,28 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void contaClienteDelete() {
+        BankService service = BankService.retrofit.create(BankService.class);
+        final Call<Return> call = service.bankDelete(this.contaClienteSelecionada.getId());
+        call.enqueue(new Callback<Return>() {
+            @Override
+            public void onResponse(Call<Return> call, Response<Return> response) {
+                Toast.makeText(
+                        MainActivity.this,
+                        response.body().getMessage(),
+                        Toast.LENGTH_LONG
+                ).show();
+            }
 
+            @Override
+            public void onFailure(Call<Return> call, Throwable throwable) {
+                Toast.makeText(
+                        MainActivity.this,
+                        "Erro: " + throwable.getMessage(),
+                        Toast.LENGTH_LONG
+                ).show();
+            }
+        });
+        onLoadListAccounts();
     }
 
     private void contaClienteDeposito() {

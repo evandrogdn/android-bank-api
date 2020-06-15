@@ -3,6 +3,7 @@ package com.example.evandro.banco.service;
 import com.example.evandro.banco.models.ContaCliente;
 import com.example.evandro.banco.models.ContaClienteRequest;
 import com.example.evandro.banco.models.Deposit;
+import com.example.evandro.banco.models.Return;
 import com.example.evandro.banco.models.Transfer;
 import com.example.evandro.banco.models.Withdraw;
 
@@ -33,7 +34,7 @@ public interface BankService {
     Call<List<ContaCliente>> bankGet();
     // remover a conta
     @DELETE("api/v1/conta-cliente/{id}")
-    Call<ContaCliente> bankDelete(@Path("id") String id);
+    Call<Return> bankDelete(@Path("id") String id);
     // realizar saque
     @POST("api/v1/conta-cliente/movimentar/saque")
     Call<ContaCliente> bankWithdraw(@Body Withdraw withdraw);

@@ -42,8 +42,8 @@ public interface BankService {
     @POST("api/v1/conta-cliente/{id}/movimentar/deposito")
     Call<Return> bankDeposit(@Body Deposit deposit, @Path("id") String id);
     // realizar transferencia
-    @POST("api/v1/conta-cliente/movimentar/transferencia")
-    Call<ContaCliente> bankTransfer(@Body Transfer transfer);
+    @POST("api/v1/conta-cliente/movimentar/transferir")
+    Call<Return> bankTransfer(@Body Transfer transfer);
 
     public static final Retrofit retrofit = new Retrofit.Builder()
             .baseUrl("http://192.168.0.105:3030/")

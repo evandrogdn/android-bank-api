@@ -33,7 +33,7 @@
     <string name="numero_agencia_conta_origem_label">Número da Agência da Conta Origem:</string>
     <string name="digito_agencia_conta_origem_label">Dígito verificador da Agência da Conta Origem:</string>
     <string name="numero_agencia_conta_destino_label">Número da Agência da Conta Destino:</string>
-    <string name="digito_agencia_conta_destino_label">Dígito verificador da Agência da Conta Origem:</string>
+    <string name="digito_agencia_conta_destino_label">Dígito verificador da Agência da Conta Destino:</string>
     <string name="botao_saque_label">Sacar</string>
     <string name="numero_agencia_conta_deposito_label">Número da Agência da Conta para Deposito:</string>
     <string name="digito_agencia_conta_deposito_label">Dígito verificador da Agência da Conta para Deposito:</string>

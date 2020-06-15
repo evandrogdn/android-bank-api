@@ -1,48 +1,29 @@
 package com.example.evandro.banco.models;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.io.Serializable;
 
 public class Transfer implements Serializable {
-    private String agenciaContaOrigemNumero;
-    private String agenciaContaOrigemDigito;
-    private String contaOrigemNumero;
-    private String contaOrigemDigito;
+    @SerializedName("contaOrigem")
+    private String contaOrigem;
+    @SerializedName("agenciaContaDestinoNumero")
     private String agenciaContaDestinoNumero;
+    @SerializedName("agenciaContaDestinoDigito")
     private String agenciaContaDestinoDigito;
+    @SerializedName("contaDestinoNumero")
     private String contaDestinoNumero;
+    @SerializedName("contaDestinoDigito")
     private String contaDestinoDigito;
-    private Float valorTransferencia;
+    @SerializedName("valorMovimento")
+    private Float valorMovimento;
 
-    public String getAgenciaContaOrigemNumero() {
-        return agenciaContaOrigemNumero;
+    public String getContaOrigem() {
+        return contaOrigem;
     }
 
-    public void setAgenciaContaOrigemNumero(String agenciaContaOrigemNumero) {
-        this.agenciaContaOrigemNumero = agenciaContaOrigemNumero;
-    }
-
-    public String getAgenciaContaOrigemDigito() {
-        return agenciaContaOrigemDigito;
-    }
-
-    public void setAgenciaContaOrigemDigito(String agenciaContaOrigemDigito) {
-        this.agenciaContaOrigemDigito = agenciaContaOrigemDigito;
-    }
-
-    public String getContaOrigemNumero() {
-        return contaOrigemNumero;
-    }
-
-    public void setContaOrigemNumero(String contaOrigemNumero) {
-        this.contaOrigemNumero = contaOrigemNumero;
-    }
-
-    public String getContaOrigemDigito() {
-        return contaOrigemDigito;
-    }
-
-    public void setContaOrigemDigito(String contaOrigemDigito) {
-        this.contaOrigemDigito = contaOrigemDigito;
+    public void setContaOrigem(String contaOrigem) {
+        this.contaOrigem = contaOrigem;
     }
 
     public String getAgenciaContaDestinoNumero() {
@@ -77,11 +58,11 @@ public class Transfer implements Serializable {
         this.contaDestinoDigito = contaDestinoDigito;
     }
 
-    public Float getValorTransferencia() {
-        return valorTransferencia;
+    public Float getValorMovimento() {
+        return valorMovimento;
     }
 
-    public void setValorTransferencia(Float valorTransferencia) {
-        this.valorTransferencia = valorTransferencia;
+    public void setValorMovimento(Float valorMovimento) {
+        this.valorMovimento = valorMovimento;
     }
 }

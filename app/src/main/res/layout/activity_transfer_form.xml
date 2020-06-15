@@ -9,53 +9,6 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         >
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/numero_agencia_conta_origem_label"
-            />
-        <EditText
-            android:id="@+id/numero_agencia_conta_origem"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/digito_agencia_conta_origem_label"
-            />
-        <EditText
-            android:id="@+id/digito_agencia_conta_origem"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/conta_origem_numero_label"
-            />
-        <EditText
-            android:id="@+id/conta_origem_numero"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/conta_origem_digito_label"
-            />
-        <EditText
-            android:id="@+id/conta_origem_digito"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            />
 
         <TextView
             android:layout_width="wrap_content"

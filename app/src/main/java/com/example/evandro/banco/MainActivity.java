@@ -15,10 +15,12 @@ import android.widget.Toast;
 
 import com.example.evandro.banco.activities.DepositActivity;
 import com.example.evandro.banco.activities.FormularioActivity;
+import com.example.evandro.banco.activities.TransferActivity;
 import com.example.evandro.banco.activities.WithdrawActivity;
 import com.example.evandro.banco.adapters.ContaClienteAdapter;
 import com.example.evandro.banco.models.ContaCliente;
 import com.example.evandro.banco.models.Return;
+import com.example.evandro.banco.models.Transfer;
 import com.example.evandro.banco.models.Withdraw;
 import com.example.evandro.banco.service.BankService;
 
@@ -93,7 +95,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void contaClienteTransferencia() {
-
+        Intent intent = new Intent(MainActivity.this, TransferActivity.class);
+        intent.putExtra("conta_cliente_selecionada", this.contaClienteSelecionada);
+        startActivity(intent);
+        onLoadListAccounts();
     }
 
     public void popUpMenuAction(MenuItem item) {

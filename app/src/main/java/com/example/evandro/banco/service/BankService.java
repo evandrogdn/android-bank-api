@@ -24,7 +24,7 @@ public interface BankService {
     Call<ContaCliente> bankInsert(@Body ContaClienteRequest contaCliente);
     // atualizar uma conta
     @PUT("api/v1/conta-cliente/{id}")
-    Call<ContaCliente> bankUpdate(@Body ContaCliente contaCliente, @Path("id") String id);
+    Call<ContaCliente> bankUpdate(@Body ContaClienteRequest contaCliente, @Path("id") String id);
     // buscar uma conta
     @GET("api/v1/conta-cliente/{id}")
     Call<ContaCliente> bankGetOne(@Path("id") String id);

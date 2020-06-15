@@ -96,20 +96,28 @@ public class FormHelper {
     public void setDadosIntoForm(ContaCliente contaCliente) {
         this.titular.setText(contaCliente.getTitular());
         this.inscrFederal.setText(contaCliente.getInscrFederal());
-        this.enderecoLogradouro.setText(contaCliente.getEndereco().getLogradouro());
-        this.enderecoBairro.setText(contaCliente.getEndereco().getBairro());
-        this.enderecoCidade.setText(contaCliente.getEndereco().getCidade());
-        this.enderecoCep.setText(contaCliente.getEndereco().getCep());
-        this.enderecoNumero.setText(contaCliente.getEndereco().getNumero());
-        this.enderecoComplemento.setText(contaCliente.getEndereco().getComplemento());
-        this.contatoTelefone.setText(contaCliente.getContato().getTelefone());
-        this.contatoCelular.setText(contaCliente.getContato().getCelular());
-        this.contatoEmail.setText(contaCliente.getContato().getEmail());
-        this.agenciaNome.setText(contaCliente.getAgencia().getNome());
-        this.agenciaNumero.setText(contaCliente.getAgencia().getNumero());
-        this.agenciaDigito.setText(contaCliente.getAgencia().getDigito());
-        this.contaTipo.setText(contaCliente.getConta().getTipo());
-        this.contaNumero.setText(contaCliente.getConta().getNumero());
-        this.contaDigito.setText(contaCliente.getConta().getDigito());
+        // endereco
+        ContaCliente.Endereco endereco = contaCliente.getEndereco();
+        this.enderecoLogradouro.setText(endereco.getLogradouro());
+        this.enderecoBairro.setText(endereco.getBairro());
+        this.enderecoCidade.setText(endereco.getCidade());
+        this.enderecoCep.setText(endereco.getCep());
+        this.enderecoNumero.setText(endereco.getNumero());
+        this.enderecoComplemento.setText(endereco.getComplemento());
+        // contato
+        ContaCliente.Contato contato = contaCliente.getContato();
+        this.contatoTelefone.setText(contato.getTelefone());
+        this.contatoCelular.setText(contato.getCelular());
+        this.contatoEmail.setText(contato.getEmail());
+        // agencia
+        ContaCliente.Agencia agencia = contaCliente.getAgencia();
+        this.agenciaNome.setText(agencia.getNome());
+        this.agenciaNumero.setText(agencia.getNumero());
+        this.agenciaDigito.setText(agencia.getDigito());
+        // conta
+        ContaCliente.Conta conta = contaCliente.getConta();
+        this.contaTipo.setText("" + conta.getTipo());
+        this.contaNumero.setText(conta.getNumero());
+        this.contaDigito.setText(conta.getDigito());
     }
 }

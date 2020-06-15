@@ -26,6 +26,15 @@ public class FormularioActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form);
 
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            ContaCliente contaClienteSelecioanda = (ContaCliente) getIntent().getSerializableExtra("conta_cliente_selecionada");
+            if (contaClienteSelecioanda != null) {
+                this.contaCliente = contaClienteSelecioanda;
+                (new FormHelper(FormularioActivity.this)).setDadosIntoForm(this.contaCliente);
+            }
+        }
+
         btn = findViewById(R.id.botao_save);
         addListeners();
     }
@@ -61,6 +70,38 @@ public class FormularioActivity extends AppCompatActivity {
         sendCreateContaCliente(contaClientePost);
     }
 
+    private void sendUpdateContaCliente(ContaClienteRequest contaClienteRequest) {
+        BankService service = BankService.retrofit.create(BankService.class);
+        final Call<ContaCliente> call = service.bankUpdate(contaClienteRequest, contaClienteRequest.getId());
+
+        call.enqueue(new Callback<ContaCliente>() {
+            @Override
+            public void onResponse(Call<ContaCliente> call, Response<ContaCliente> response) {
+                Toast.makeText(
+                        FormularioActivity.this,
+                        "Registro atualizado com sucesso!",
+                        Toast.LENGTH_LONG
+                ).show();
+            }
+
+            @Override
+            public void onFailure(Call<ContaCliente> call, Throwable throwable) {
+                Toast.makeText(
+                        FormularioActivity.this,
+                        "Erro: " + throwable.getMessage(),
+                        Toast.LENGTH_LONG
+                ).show();
+            }
+        });
+    }
+
+    private void contaClienteUpdate() {
+        ContaClienteRequest contaClienteUpdate = (new FormHelper(FormularioActivity.this).getDadosFromForm());
+        contaClienteUpdate.setId(this.contaCliente.getId());
+
+        sendUpdateContaCliente(contaClienteUpdate);
+    }
+
     /**
      * Método que adiciona os listeners da tela
      */
@@ -70,6 +111,8 @@ public class FormularioActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (contaCliente == null) {
                     contaClienteCreate();
+                } else {
+                    contaClienteUpdate();
                 }
                 finish();
             }

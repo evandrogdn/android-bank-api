@@ -7,7 +7,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.PopupMenu;
 import android.widget.Toast;
 
 import com.example.evandro.banco.activities.FormularioActivity;
@@ -24,13 +27,93 @@ import retrofit2.Response;
 public class MainActivity extends AppCompatActivity {
 
     protected ListView listAccounts;
+    protected ContaCliente contaClienteSelecionada;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         listAccounts = findViewById(R.id.accounts_list);
+        onLoadListeners();
         onLoadListAccounts();
+    }
+
+    private void getContaClienteSelecionada(int position) {
+        this.contaClienteSelecionada = (ContaCliente) listAccounts.getAdapter().getItem(position);
+    }
+
+    private void contaClienteUpdate() {
+        Intent intent = new Intent(MainActivity.this, FormularioActivity.class);
+        intent.putExtra("conta_cliente_selecionada", this.contaClienteSelecionada);
+        startActivity(intent);
+        onLoadListAccounts();
+    }
+
+    private void contaClienteDelete() {
+
+    }
+
+    private void contaClienteDeposito() {
+
+    }
+
+    private void contaClienteSaque() {
+
+    }
+
+    private void contaClienteTransferencia() {
+
+    }
+
+    public void popUpMenuAction(MenuItem item) {
+        switch (item.getTitle().toString()) {
+            case "Editar":
+                contaClienteUpdate();
+                break;
+            case "Remover":
+                contaClienteDelete();
+                break;
+            case "Deposito":
+                contaClienteDeposito();
+                break;
+            case "Saque":
+                contaClienteSaque();
+                break;
+            case "Transferência":
+                contaClienteTransferencia();
+                break;
+            default:
+                Toast.makeText(
+                        MainActivity.this,
+                        "NOT IMPLEMENTED YET",
+                        Toast.LENGTH_LONG
+                ).show();
+        }
+    }
+
+    private void onLoadListeners() {
+        listAccounts.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                getContaClienteSelecionada(position);
+
+                PopupMenu menu = new PopupMenu(MainActivity.this, view);
+                menu.getMenu().add("Editar");
+                menu.getMenu().add("Remover");
+                menu.getMenu().add("Deposito");
+                menu.getMenu().add("Saque");
+                menu.getMenu().add("Transferência");
+                menu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                    @Override
+                    public boolean onMenuItemClick(MenuItem item) {
+                        popUpMenuAction(item);
+                        onLoadListAccounts();
+                        return true;
+                    }
+                });
+                menu.show();
+            }
+        });
     }
 
     private void onLoadListAccounts() {
